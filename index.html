@@ -35,9 +35,9 @@
 
       iconchanger.addEventListener("click", e => {
         let dot = document.querySelector(".dot");
-        console.log("clicked", dot);
+        // console.log("clicked", dot);
         let icon = dot.getAttribute("data-prefix") === "far" ? "fas" : "far";
-        console.log("icon", icon);
+        // console.log("icon", icon);
         dot.setAttribute("data-prefix", icon);
       });
     </script>
