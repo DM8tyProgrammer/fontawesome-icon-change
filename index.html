@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Parcel Sandbox</title>
+    <meta charset="UTF-8" />
+  </head>
+
+  <body>
+    <div class="w-50 mx-auto">
+      <header class="py-3 border-bottom my-4">
+        <h1>Change SVG Fontawesome icon</h1>
+        <a
+          class="btn-link text-center"
+          href="https://themightyprogrammer.dev/snippet/changing-svg-icon"
+          >Read Technique</a
+        >
+      </header>
+
+      <div class="demo text-center border py-3">
+        <button class="btn btn-primary" disabled>
+          <i class="dot far fa-circle"></i>
+        </button>
+      </div>
+
+      <div class="control text-center">
+        <button id="iconchanger" class="btn btn-success my-3 btn-lg">
+          Change Icon
+        </button>
+      </div>
+    </div>
+    <script src="src/index.js"></script>
+
+    <script>
+      let iconchanger = document.querySelector("#iconchanger");
+
+      iconchanger.addEventListener("click", e => {
+        let dot = document.querySelector(".dot");
+        console.log("clicked", dot);
+        let icon = dot.getAttribute("data-prefix") === "far" ? "fas" : "far";
+        console.log("icon", icon);
+        dot.setAttribute("data-prefix", icon);
+      });
+    </script>
+  </body>
+</html>
